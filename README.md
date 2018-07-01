@@ -1,6 +1,8 @@
 # time2sleep-react
 A React + Electron Shutdown Timer
 
+![time2sleep-react](screenshots/app.png?raw=true "Time2Sleep-React")
+
 ## Install
 ``` bash
 # Clone the repository
