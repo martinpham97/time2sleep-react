@@ -1,0 +1,24 @@
+html {
+  height: 100%;
+}
+
+body {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -webkit-app-region: no-drag;
+}
+
+button {
+  width: $btn-width;
+  height: $btn-height;
+  border: none;
+  font-family: $font-family-roboto;
+  font-size: $fonts-s-size;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.container {
+  padding: $s-size;
+  text-align: center;
+}

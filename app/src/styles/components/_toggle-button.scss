@@ -1,0 +1,26 @@
+.toggle-button {
+  width: 140px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 3px;
+  background: $light-green;
+  color: $light-text-white;
+}
+
+.toggle-button:hover {
+  background: lighten($light-green, 5%);
+  color: $light-text-white;
+}
+
+.toggle-button:focus {
+  color: $light-text-white;
+}
+
+.toggle-button--stop {
+  background: $light-red;
+}
+
+.toggle-button--stop:hover {
+  background: lighten($light-red, 5%);
+}

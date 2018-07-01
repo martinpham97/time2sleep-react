@@ -1,0 +1,29 @@
+{
+  "parser": "babel-eslint",
+
+  "env": {
+    "browser": true,
+    "node": true,
+  },
+
+  "globals": {
+    "React": true,
+  },
+
+  "ecmaFeatures": {
+    "jsx": true,
+  },
+
+  "plugins": [
+    "react",
+    "babel",
+  ],
+
+  "extends": "airbnb",
+
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "babel/semi": 1,
+    "jsx-a11y/label-has-for": 0,
+  }
+}

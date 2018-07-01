@@ -1,0 +1,117 @@
+// Fonts
+// $font-open-sans-path: '../assets/fonts/Open_Sans/';
+// $font-open-sans: 'Open Sans';
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: normal;
+//   font-weight: normal;
+//   src: url($font-open-sans-path + 'OpenSans-Regular.ttf') format('ttf');
+// }
+//
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: normal;
+//   font-weight: bold;
+//   src: url($font-open-sans-path + 'OpenSans-SemiBold.ttf') format('ttf');
+// }
+//
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: italic;
+//   font-weight: normal;
+//   src: url($font-open-sans-path + 'OpenSans-Italic.ttf') format('ttf');
+// }
+//
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: normal;
+//   font-weight: lighter;
+//   src: url($font-open-sans-path + 'OpenSans-Light.ttf') format('ttf');
+// }
+//
+// $font-monsterrat-path: '../assets/fonts/Montserrat/';
+// $font-monsterrat: 'Montserrat';
+// @font-face {
+//   font-family: 'Montserrat';
+//   font-style: normal;
+//   font-weight: normal;
+//   src: url($font-monsterrat-path + 'Montserrat-Regular.ttf') format('ttf');
+// }
+//
+// @font-face {
+//   font-family: 'Montserrat';
+//   font-style: normal;
+//   font-weight: bold;
+//   src: url($font-monsterrat-path + 'Montserrat-SemiBold.ttf') format('ttf');
+// }
+//
+// @font-face {
+//   font-family: 'Montserrat';
+//   font-style: italic;
+//   font-weight: normal;
+//   src: url($font-monsterrat-path + 'Montserrat-Italic.ttf') format('ttf');
+// }
+//
+// @font-face {
+//   font-family: 'Montserrat';
+//   font-style: normal;
+//   font-weight: lighter;
+//   src: url($font-monsterrat-path + 'Montserrat-Light.ttf') format('ttf');
+// }
+
+$font-roboto-path: '../assets/fonts/Roboto/';
+$font-roboto: 'Roboto';
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  src: url($font-roboto-path + 'Roboto-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  src: url($font-roboto-path + 'Roboto-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: normal;
+  src: url($font-roboto-path + 'Roboto-Italic.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: lighter;
+  src: url($font-roboto-path + 'Roboto-Light.ttf') format('ttf');
+}
+
+$font-family-roboto: $font-roboto, Helvetica, Arial, sans-serif;
+// $font-family-open-sans: $font-open-sans, Helvetica, Arial, sans-serif;
+// $font-family-monsterrat: $font-monsterrat, Helvetica, Arial, sans-serif;
+
+// Fonts size
+$fonts-s-size: 16px;
+$fonts-m-size: 24px;
+$fonts-l-size: 44px;
+
+// Colors
+$light-grey: #dcdde1;
+$light-white: #ecf0f1;
+$light-text-white: #f5f6fa;
+$light-text-black: #2f3640;
+$light-green: #20bf6b;
+$light-red: #c0392b;
+
+// Spacing
+$xs-size: 5px;
+$s-size: 10px;
+$m-size: 20px;
+
+// Buttons
+$btn-height: 40px;
+$btn-width: 120px;
+$drop-up-width: 170px;

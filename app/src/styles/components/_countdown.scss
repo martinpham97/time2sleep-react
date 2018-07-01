@@ -1,0 +1,32 @@
+.countdown {
+  display: inline-block ;
+  margin: $s-size;
+  padding: $m-size;
+  padding-bottom: $s-size;
+  border-radius: 3px;
+  background: $light-grey;
+}
+
+.countdown__input {
+  width: 100px !important;
+  height: 100px !important;
+  border-style: none !important;
+  background-color: $light-white !important;
+  font-family: $font-family-roboto !important;
+  font-size: $fonts-l-size !important;
+  font-weight: bold;
+  text-align: right !important;
+}
+
+.countdown__input:disabled {
+  user-select: none;
+}
+
+.countdown__label {
+  margin: $xs-size 0 0;
+  color: $light-text-black;
+  font-family: $font-family-roboto;
+  font-size: $fonts-m-size;
+  font-weight: normal;
+  text-align: center;
+}

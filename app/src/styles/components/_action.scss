@@ -1,0 +1,16 @@
+.action button {
+  float: left;
+  cursor: pointer;
+}
+
+.action {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+// Clear-fix
+.action:after {
+  display: table;
+  clear: both;
+  content: '';
+}

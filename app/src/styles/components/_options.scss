@@ -1,0 +1,76 @@
+.options__button {
+  width: $drop-up-width;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 0px;
+  background-color: $light-grey;
+  color: $light-text-black;
+}
+
+.options__button:hover {
+  background-color: lighten($light-grey, 5%);
+  color: $light-text-black;
+}
+
+.options__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.options {
+  display: inline-block;
+  position: relative;
+}
+
+.is-open {
+  display: block !important;
+  background-color: lighten($light-grey, 5%);
+}
+
+.options__item {
+  display: block;
+  padding: 12px 16px;
+  color: $light-text-black;
+  font-family: $font-family-roboto;
+  text-decoration: none;
+}
+
+.options__item:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.options__item:hover {
+  background-color: $light-grey;
+  color: $light-text-black;
+}
+
+.options__list {
+  display: none;
+  position: absolute;
+  bottom: 130%;
+  width: $drop-up-width;
+  border-radius: 3px;
+  background-color: $light-white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+// Drop up Triangle
+// Source: http://apps.eky.hk/css-triangle-generator/ */
+.options__list:after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -$s-size;
+  border: solid transparent;
+  border-width: $s-size;
+  border-top-color: $light-white;
+  content: '';
+  pointer-events: none;
+}
