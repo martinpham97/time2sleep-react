@@ -2,6 +2,7 @@
 A React + Electron Shutdown Timer
 
 ![time2sleep-react](screenshots/app.png?raw=true "Time2Sleep-React")
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmartinpham97%2Ftime2sleep-react.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmartinpham97%2Ftime2sleep-react?ref=badge_shield)
 
 ## Install
 ``` bash
@@ -36,3 +37,7 @@ $ npm run dist
 # Using Yarn
 $ yarn dist
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmartinpham97%2Ftime2sleep-react.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmartinpham97%2Ftime2sleep-react?ref=badge_large)
