@@ -23,9 +23,9 @@ const { app, BrowserWindow, ipcMain } = electron;
 const shutdown = require('electron-shutdown-command');
 
 // Let electron reloads by itself when webpack watches changes in ./app/
-require('electron-reload')(__dirname, {
-  electron: path.join(__dirname, 'node_modules', '.bin', 'electron.cmd'),
-});
+// require('electron-reload')(__dirname, {
+//   electron: path.join(__dirname, 'node_modules', '.bin', 'electron.cmd'),
+// });
 
 // To avoid being garbage collected
 let mainWindow;
