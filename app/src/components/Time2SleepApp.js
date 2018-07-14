@@ -9,6 +9,9 @@ import { getTimeRemaining, getTotalTime } from '../utils/utils';
 const electron = window.require('electron');
 const { ipcRenderer } = electron;
 
+// Default options for all systems
+const options = ['shutdown', 'reboot'];
+
 const allOptions = [
   {
     cmd: 'shutdown',
@@ -39,19 +42,26 @@ export default class Time2SleepApp extends Component {
       minutes: 0,
       seconds: 0,
     },
-    options: allOptions,
-    option: allOptions[0],
+    options: allOptions.filter(key => options.includes(key.cmd)),
+    option: allOptions.filter(key => options.includes(key.cmd))[0],
     isOpen: false,
     start: false,
   };
 
   componentWillMount() {
-    const { options } = this.props;
-    const availableOptions = allOptions.filter(key => options.includes(key.cmd));
+    ipcRenderer.on('osinfo', (e, osinfo) => {
+      if (osinfo === 'win32') {
+        options.push('hibernate', 'log-off');
+      } else if (osinfo === 'darwin') {
+        options.push('sleep');
+      }
 
-    this.setState({
-      options: availableOptions,
-      option: availableOptions[0],
+      const availableOptions = allOptions.filter(key => options.includes(key.cmd));
+
+      this.setState({
+        options: availableOptions,
+        option: availableOptions[0],
+      });
     });
   }
 
