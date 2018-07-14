@@ -14,13 +14,12 @@
 | Log-off 	  | :heavy_check_mark: | :x: 				        | :x: 				       |
 | Sleep       | :x:      		       | :heavy_check_mark: | :x: 				       |
 
+## Releases
+Check out the releases [here](https://github.com/martinpham97/time2sleep-react/releases)
 
 ## Requirements
 * [Node.js](https://nodejs.org)
 * [Yarn](https://yarnpkg.com) (optional)
-
-## Releases
-Check out the releases [here](https://github.com/martinpham97/time2sleep-react/releases)
 
 ## Install
 ``` bash
