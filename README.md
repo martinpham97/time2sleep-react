@@ -1,10 +1,8 @@
 
 # time2sleep-react
 
-<p align="center">
 <h4 align="center">A cross-platform shutdown timer</h4>
-  ![time2sleep-react](screenshots/app.png?raw=true "Time2Sleep-React")
-</p>
+<p align="center">![time2sleep-react](screenshots/app.png?raw=true "Time2Sleep-React")</p>
 
 ## Compatibility
 
