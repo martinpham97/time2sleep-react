@@ -16,8 +16,8 @@
 
 
 ## Requirements
-* Node.js
-* Yarn (optional)
+* [Node.js](https://nodejs.org)
+* [Yarn](https://yarnpkg.com) (optional)
 
 ## Releases
 Check out the releases [here](https://github.com/martinpham97/time2sleep-react/releases)
