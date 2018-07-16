@@ -48,7 +48,9 @@
     "pack": "electron-builder --dir",
     "dist-win": "electron-builder --win",
     "dist-mac": "electron-builder --mac",
-    "dist-linux": "electron-builder --linux"
+    "dist-linux": "electron-builder --linux",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "license": "MIT",
   "devDependencies": {
@@ -87,6 +89,8 @@
     "react-ionicons": "^2.1.6",
     "react-skeleton-css": "^1.1.0",
     "sass-loader": "^7.0.3",
-    "style-loader": "^0.21.0"
-  }
+    "style-loader": "^0.21.0",
+    "snyk": "^1.88.2"
+  },
+  "snyk": true
 }
