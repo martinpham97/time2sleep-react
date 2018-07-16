@@ -1,18 +1,20 @@
 
 # time2sleep-react
 
-<h4 align="center">A cross-platform shutdown timer</h4>
+<h3 align="center">A cross-platform shutdown timer</h3>
 <p align="center"><img src="screenshots/app.png"></p>
 
 ## Compatibility
 
-| Commands/OS | Windows			       | MacOS			        | Linux			         |
+| Command/OS  | Windows			       | MacOS			        | Linux			         |
 | ----------- | ------------------ | ------------------ | ------------------ |
 | Shutdown    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Reboot      | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Hibernate	  | :heavy_check_mark: | :x:				        | :x: 				       |
+| Hibernate*	| :heavy_check_mark: | :x:				        | :x: 				       |
 | Log-off 	  | :heavy_check_mark: | :x: 				        | :x: 				       |
 | Sleep       | :x:      		       | :heavy_check_mark: | :x: 				       |
+
+<p>* Hibernate command will be trigger Sleep instead for Windows 8/10 if Hibernate is turned off</p>
 
 ## Releases
 Check out the releases [here](https://github.com/martinpham97/time2sleep-react/releases)
