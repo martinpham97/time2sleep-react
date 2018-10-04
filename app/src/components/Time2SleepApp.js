@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Action from './Action';
 import Logo from './Logo';
 import Timer from './Timer';
@@ -7,10 +6,11 @@ import LogoImg from '../assets/img/time2sleep.png';
 import { getTimeRemaining, getTotalTime } from '../utils/utils';
 
 const electron = window.require('electron');
+
 const { ipcRenderer } = electron;
 
 // Default options for all systems
-const options = ['shutdown', 'reboot'];
+const defaultOptions = ['shutdown', 'reboot'];
 
 const allOptions = [
   {
@@ -42,21 +42,22 @@ export default class Time2SleepApp extends Component {
       minutes: 0,
       seconds: 0,
     },
-    options: allOptions.filter(key => options.includes(key.cmd)),
-    option: allOptions.filter(key => options.includes(key.cmd))[0],
+    options: allOptions.filter(key => defaultOptions.includes(key.cmd)),
+    option: allOptions.filter(key => defaultOptions.includes(key.cmd))[0],
     isOpen: false,
     start: false,
+    raf: undefined,
   };
 
   componentWillMount() {
     ipcRenderer.on('osinfo', (e, osinfo) => {
       if (osinfo === 'win32') {
-        options.push('hibernate', 'log-off');
+        defaultOptions.push('hibernate', 'log-off');
       } else if (osinfo === 'darwin') {
-        options.push('sleep');
+        defaultOptions.push('sleep');
       }
 
-      const availableOptions = allOptions.filter(key => options.includes(key.cmd));
+      const availableOptions = allOptions.filter(key => defaultOptions.includes(key.cmd));
 
       this.setState({
         options: availableOptions,
@@ -111,7 +112,8 @@ export default class Time2SleepApp extends Component {
   startTimer = (time) => {
     const { option } = this.state;
 
-    this.interval = setInterval(() => {
+    // More consistent and accurate than setInterval
+    const raf = requestAnimationFrame(() => {
       const timeLeft = getTimeRemaining(time);
 
       if (timeLeft.seconds < 0) {
@@ -122,11 +124,16 @@ export default class Time2SleepApp extends Component {
         // Update current time
         this.setState({ time: timeLeft });
       }
-    }, 1000);
+
+      this.startTimer(time);
+    });
+
+    this.setState({ raf });
   };
 
   stopTimer = () => {
-    clearInterval(this.interval);
+    const { raf } = this.state;
+    cancelAnimationFrame(raf);
 
     this.setState(() => ({
       start: false,
@@ -171,7 +178,3 @@ export default class Time2SleepApp extends Component {
     );
   }
 }
-
-Time2SleepApp.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string).isRequired,
-};

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { addLeadingZeros } from '../utils/utils';
 
 const Countdown = (props) => {
   const {
@@ -17,7 +16,7 @@ const Countdown = (props) => {
         type="number"
         step={1}
         min={0}
-        value={addLeadingZeros(value)}
+        value={String(value).padStart(2, '0')}
         disabled={start}
         onChange={(e) => {
           const time = {};
@@ -29,7 +28,10 @@ const Countdown = (props) => {
           }
         }}
       />
-      <label className="countdown__label">
+      <label
+        htmlFor="countdown__input"
+        className="countdown__label"
+      >
         {text}
       </label>
     </div>

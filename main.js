@@ -1,26 +1,11 @@
-const lru = require('lru-cache')({ max: 256, maxAge: 250 /* ms */ });
-
-const fs = require('fs');
-
-const origLstat = fs.lstatSync.bind(fs);
-
-// NB: The biggest offender of thrashing lstatSync is the node module system
-// itself, which we can't get into via any sane means.
-require('fs').lstatSync = (p) => {
-  let r = lru.get(p);
-  if (r) return r;
-
-  r = origLstat(p);
-  lru.set(p, r);
-  return r;
-};
-
 const electron = require('electron');
 const url = require('url');
 const path = require('path');
 
 const { app, BrowserWindow, ipcMain } = electron;
 const shutdown = require('electron-shutdown-command');
+
+require('dotenv').config();
 
 // Let electron reloads by itself when webpack watches changes in ./app/
 require('electron-reload')(__dirname, {
@@ -39,7 +24,11 @@ app.on('ready', () => {
     resizable: false,
     transparent: false,
     radii: [3, 3, 3, 3],
+    title: `${app.getName()} - ${app.getVersion()}`,
   });
+
+  // Prevent title changed to default
+  mainWindow.on('page-title-updated', e => e.preventDefault());
 
   // Load html into window from file://dirname/app/index.html
   mainWindow.loadURL(url.format({
@@ -57,7 +46,9 @@ app.on('ready', () => {
   mainWindow.setMenu(null);
 
   // Developer Mode
-  // mainWindow.toggleDevTools();
+  if (process.env.NODE_ENV === 'development') {
+    mainWindow.toggleDevTools();
+  }
 
   // Send OS info
   mainWindow.webContents.on('did-finish-load', () => {
@@ -70,7 +61,7 @@ app.on('ready', () => {
       force: true,
       timerseconds: 0,
       sudo: true,
-      debug: false,
+      debug: process.env.NODE_ENV === 'development',
       quitapp: true,
     };
 

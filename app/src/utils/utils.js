@@ -22,19 +22,8 @@ const getTimeRemaining = (endTime) => {
   };
 };
 
-const addLeadingZeros = (value) => {
-  let v = String(value);
-
-  while (v.length < 2) {
-    v = `0${v}`;
-  }
-
-  return v;
-};
-
 export {
   capitalize,
   getTimeRemaining,
   getTotalTime,
-  addLeadingZeros,
 };

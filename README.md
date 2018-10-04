@@ -53,6 +53,15 @@ $ npm run dist-linux
 ```
 
 ## Changelog
+### 2.0.0 (04/10/2018)
+* Updated react to version 16.5.2
+* Updated babel to version 8
+* Used javascript's ES2017 padStart() instead of util function for countdown input
+* Added version number in window title
+* Added environment variables
+* Removed lru-cache
+* Minor code refractor
+
 ### 1.0.1 (14/07/2018)
 * Added lru-cache for better startup time
 * Changed OS info events for better component load time
