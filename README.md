@@ -1,6 +1,8 @@
 
 # time2sleep-react
 
+![time2sleep-react](screenshots/app.png?raw=true "Time2Sleep-React")
+
 <h3 align="center">A cross-platform shutdown timer</h3>
 <p align="center"><img src="screenshots/app.png"></p>
 
@@ -51,6 +53,9 @@ $ npm run dist-mac
 # Linux
 $ npm run dist-linux
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmartinpham97%2Ftime2sleep-react.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmartinpham97%2Ftime2sleep-react?ref=badge_large)
 
 ## Changelog
 ### 2.0.0 (04/10/2018)
