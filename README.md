@@ -1,8 +1,29 @@
+
 # time2sleep-react
-A React + Electron Shutdown Timer
 
 ![time2sleep-react](screenshots/app.png?raw=true "Time2Sleep-React")
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmartinpham97%2Ftime2sleep-react.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmartinpham97%2Ftime2sleep-react?ref=badge_shield)
+
+<h3 align="center">A cross-platform shutdown timer</h3>
+<p align="center"><img src="screenshots/app.png"></p>
+
+## Compatibility
+
+| Command/OS  | Windows			       | MacOS			        | Linux			         |
+| ----------- | ------------------ | ------------------ | ------------------ |
+| Shutdown    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Reboot      | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Hibernate*	| :heavy_check_mark: | :x:				        | :x: 				       |
+| Log-off 	  | :heavy_check_mark: | :x: 				        | :x: 				       |
+| Sleep       | :x:      		       | :heavy_check_mark: | :x: 				       |
+
+<p>* Hibernate command will be trigger Sleep instead for Windows 8/10 if Hibernate is turned off</p>
+
+## Releases
+Check out the releases [here](https://github.com/martinpham97/time2sleep-react/releases)
+
+## Requirements
+* [Node.js](https://nodejs.org)
+* [Yarn](https://yarnpkg.com) (optional)
 
 ## Install
 ``` bash
@@ -13,31 +34,42 @@ $ git clone https://github.com/martinpham97/time2sleep-react
 $ cd time2sleep-react
 
 # Install dependencies
-# Using npm
 $ npm install
-
-# Using Yarn
-$ yarn install
 ```
 
 ## Run
 ``` bash
-# Using npm
 $ npm start
-
-# Using Yarn
-$ yarn start
 ```
 
 ## Build
 ``` bash
-# Using npm
-$ npm run dist
+# Windows
+$ npm run dist-win
 
-# Using Yarn
-$ yarn dist
+# MacOS
+$ npm run dist-mac
+
+# Linux
+$ npm run dist-linux
 ```
-
 
 ## License
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmartinpham97%2Ftime2sleep-react.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmartinpham97%2Ftime2sleep-react?ref=badge_large)
+
+## Changelog
+### 2.0.0 (04/10/2018)
+* Updated react to version 16.5.2
+* Updated babel to version 8
+* Used javascript's ES2017 padStart() instead of util function for countdown input
+* Added version number in window title
+* Added environment variables
+* Removed lru-cache
+* Minor code refractor
+
+### 1.0.1 (14/07/2018)
+* Added lru-cache for better startup time
+* Changed OS info events for better component load time
+* Changed to solid background instead of transparent
+* Added App ID for electron-builder
+* Removed Squirrel for Windows builds
