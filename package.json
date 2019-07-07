@@ -50,7 +50,8 @@
     "dist-mac": "electron-builder --mac",
     "dist-linux": "electron-builder --linux",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "prepare": "npm run snyk-protect",
+    "prepublish": "npm run snyk-protect"
   },
   "license": "MIT",
   "devDependencies": {
@@ -89,7 +90,7 @@
     "react-dom": "^16.5.2",
     "react-ionicons": "^2.1.6",
     "react-skeleton-css": "^1.1.0",
-    "snyk": "^1.124.1"
+    "snyk": "^1.192.3"
   },
   "snyk": true,
   "peerDependencies": {
