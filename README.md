@@ -14,7 +14,7 @@
 | Log-off 	  | :heavy_check_mark: | :x: 				        | :x: 				       |
 | Sleep       | :x:      		       | :heavy_check_mark: | :x: 				       |
 
-<p>* Hibernate command will be trigger Sleep instead for Windows 8/10 if Hibernate is turned off</p>
+<p>* Hibernate command will be triggered instead of Sleep for Windows 8/10 if Hibernate is turned off</p>
 
 ## Releases
 Check out the releases [here](https://github.com/martinpham97/time2sleep-react/releases)
