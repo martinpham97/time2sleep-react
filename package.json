@@ -50,7 +50,8 @@
     "dist-mac": "electron-builder --mac",
     "dist-linux": "electron-builder --linux",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "prepare": "npm run snyk-protect",
+    "prepublish": "npm run snyk-protect"
   },
   "license": "MIT",
   "devDependencies": {

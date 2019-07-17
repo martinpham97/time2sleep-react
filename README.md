@@ -14,7 +14,7 @@
 | Log-off 	  | :heavy_check_mark: | :x: 				        | :x: 				       |
 | Sleep       | :x:      		       | :heavy_check_mark: | :x: 				       |
 
-<p>* Hibernate command will be trigger Sleep instead for Windows 8/10 if Hibernate is turned off</p>
+<p>* Hibernate command will be triggered instead of Sleep for Windows 8/10 if Hibernate is turned off</p>
 
 ## Releases
 Check out the releases [here](https://github.com/martinpham97/time2sleep-react/releases)
@@ -51,6 +51,9 @@ $ npm run dist-mac
 # Linux
 $ npm run dist-linux
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmartinpham97%2Ftime2sleep-react.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmartinpham97%2Ftime2sleep-react?ref=badge_large)
 
 ## Changelog
 ### 2.0.0 (04/10/2018)

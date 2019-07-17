@@ -14,21 +14,21 @@ module.exports = {
     filename: 'bundle.js',
   },
 
-  // optimization: {
-  //   splitChunks: {
-  //     chunks: 'all',
-  //     cacheGroups: {
-  //       styles: {
-  //         name: 'styles',
-  //         test: /\.s?css$/,
-  //         chunks: 'all',
-  //         minChunks: 1,
-  //         reuseExistingChunk: true,
-  //         enforce: true,
-  //       },
-  //     },
-  //   },
-  // },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          test: /\.s?css$/,
+          chunks: 'all',
+          minChunks: 1,
+          reuseExistingChunk: true,
+          enforce: true,
+        },
+      },
+    },
+  },
 
   module: {
     rules: [
@@ -45,12 +45,6 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        // use: [
-        //   'css-loader',
-        //   'sass-loader?sourceMap',
-        //   'style-loader',
-        //   MiniCssExtractPlugin.loader,
-        // ],
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -90,7 +84,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'bundle.css',
-      chunkFilename: "[name].css",
+      chunkFilename: '[name].css',
     }),
   ],
 
