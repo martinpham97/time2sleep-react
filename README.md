@@ -4,6 +4,8 @@
 <h3 align="center">A cross-platform shutdown timer</h3>
 <p align="center"><img src="screenshots/app.png"></p>
 
+<a href="https://snyk.io//test/github/martinpham97/time2sleep-react?targetFile=package.json"><img src="https://snyk.io//test/github/martinpham97/time2sleep-react/badge.svg?targetFile=package.json" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io//test/github/martinpham97/time2sleep-react?targetFile=package.json" style="max-width:100%;"></a>
+
 ## Compatibility
 
 | Command/OS  | Windows			       | MacOS			        | Linux			         |
