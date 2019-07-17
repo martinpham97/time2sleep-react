@@ -5,9 +5,7 @@ import Timer from './Timer';
 import LogoImg from '../assets/img/time2sleep.png';
 import { getTimeRemaining, getTotalTime } from '../utils/utils';
 
-const electron = window.require('electron');
-
-const { ipcRenderer } = electron;
+const { ipcRenderer } = require('electron');
 
 // Default options for all systems
 const defaultOptions = ['shutdown', 'reboot'];

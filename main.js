@@ -21,10 +21,13 @@ app.on('ready', () => {
   mainWindow = new BrowserWindow({
     width: 600,
     height: 480,
-    resizable: false,
-    transparent: false,
     radii: [3, 3, 3, 3],
+    resizable: false,
     title: `${app.getName()} - ${app.getVersion()}`,
+    transparent: false,
+    webPreferences: {
+      nodeIntegration: true,
+    },
   });
 
   // Prevent title changed to default

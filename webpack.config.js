@@ -1,4 +1,4 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 
@@ -14,6 +14,22 @@ module.exports = {
     filename: 'bundle.js',
   },
 
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: 'all',
+  //     cacheGroups: {
+  //       styles: {
+  //         name: 'styles',
+  //         test: /\.s?css$/,
+  //         chunks: 'all',
+  //         minChunks: 1,
+  //         reuseExistingChunk: true,
+  //         enforce: true,
+  //       },
+  //     },
+  //   },
+  // },
+
   module: {
     rules: [
       {
@@ -25,22 +41,31 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          loader: 'css-loader',
-          options: {
-            modules: true,
-          },
-        }),
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
-        test: [/\.scss$/],
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            'css-loader',
-            'sass-loader?sourceMap',
-          ],
-        }),
+        test: /\.scss$/,
+        // use: [
+        //   'css-loader',
+        //   'sass-loader?sourceMap',
+        //   'style-loader',
+        //   MiniCssExtractPlugin.loader,
+        // ],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -63,10 +88,9 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin({
+    new MiniCssExtractPlugin({
       filename: 'bundle.css',
-      disable: false,
-      allChunks: true,
+      chunkFilename: "[name].css",
     }),
   ],
 
