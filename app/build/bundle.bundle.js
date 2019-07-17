@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["bundle"],{
 
 /***/ "./app/src/styles/styles.scss":
 /*!************************************!*\
