@@ -18,7 +18,7 @@
 
 <p>* Hibernate command will be triggered instead of Sleep for Windows 8/10 if Hibernate is turned off</p>
 
-## Releases
+## Releases/Download
 Check out the releases [here](https://github.com/martinpham97/time2sleep-react/releases)
 
 ## Requirements
