@@ -88,7 +88,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-ionicons": "^2.1.6",
+    "react-ionicons": "^4.0.3",
     "react-skeleton-css": "^1.1.0",
     "snyk": "^1.348.2"
   },
