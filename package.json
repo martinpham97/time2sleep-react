@@ -84,7 +84,7 @@
     "dotenv": "^8.0.0",
     "electron-reload": "^1.4.1",
     "electron-shutdown-command": "^0.0.8",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
