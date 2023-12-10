@@ -90,7 +90,7 @@
     "react-dom": "^16.8.6",
     "react-ionicons": "^2.1.6",
     "react-skeleton-css": "^1.1.0",
-    "snyk": "^1.348.2"
+    "snyk": "^1.518.0"
   },
   "snyk": true,
   "peerDependencies": {
